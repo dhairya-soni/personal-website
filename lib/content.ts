@@ -1,4 +1,18 @@
-export const logs = [
+type Status = "active" | "completed" | "planned" | "paused" | "writing";
+
+type LogEntry = {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  project: string;
+  status: Status;
+  tags: string[];
+  summary: string;
+  content: string;
+};
+
+export const logs: LogEntry[] = [
   {
     id: "attempt-1-url-shortener",
     slug: "attempt-1-url-shortener",
